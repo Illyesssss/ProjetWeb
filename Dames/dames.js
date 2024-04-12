@@ -56,3 +56,38 @@ function damierclic(event) {
 const damier = document.getElementById('damier');
 damier.addEventListener('click',damierclic);
 
+var t_damier = [];
+function initialiser() {
+    var i;
+    var j;
+    for(i = 0;i < 10;i++){
+        damier[i] = [];
+        for(j = 0;j < 10;j++){
+            if((i + j) % 2 == 0){
+                damier[i][j] = -1; /*damier[i][j] = -1 sinifie case inactive et damier[i][j] = null signifie case inutile*/ 
+            }
+            else{
+                damier[i][j] = null;
+            }
+        }
+    }
+
+    for(i = 0;i < 4;i++){
+        for(j = 0;j < 10;j++){
+            if((i + j) % 2 != 0){
+                damier[i][j] = 1; /*damier[i][j] = 1 sinifie que la case contient un pion noir*/
+            }
+        }
+    }
+
+    for(i = 6;i < 10;i++){
+        for(j = 0;j < 10;j++){
+            if((i + j) % 2 != 0){
+                damier[i][j] = 2; /*damier[i][j] = 2 sinifie que la case contient un pion blanc*/
+            }
+        }
+    }
+    affichedamier1();
+}
+
+
