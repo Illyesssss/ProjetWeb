@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="connexion.css">
   </head>
   <body>
+	<nav class="navbar">
+		<a href="../Main/main.html"><img src="../images/logo.png" class="logo" alt="PlayNation" width="125"></a>
+	</nav>
     <div class="connex">
       <form action="../Main/main_connecte.html" method="get">
 	<h1>Connectez-vous</h1>
 	    <div class="box">
-	      <input type="text" placeholder="Pseudo" required>  <img src="../images/login.png" alt="image_login" width="15">
+	      <input type="text" placeholder="Pseudo" maxlength="50" class="boxbox" required>  <img src="../images/login.png" alt="image_login" width="15">
 	    </div>
 	    <div class="box">
-	      <input type="password" placeholder="Mot de passe" required>  <img src="../images/cadenas.png" alt="image_cadenas" width="15">
+	      <input type="password" placeholder="Mot de passe" maxlength="50" class="boxbox" required>  <img src="../images/cadenas.png" alt="image_cadenas" width="15">
 	    </div>
 	    <div class="rappel_oubli">
 	      <label><input type="checkbox">Se souvenir de moi</label>
@@ -23,7 +26,7 @@
 	      <button type="submit" class="boutton_connexion">Se Connecter</button>
 	    </div>
 	    <div class="creer_compte">
-	      <p>Vous n'avez pas de compte ?</p><a href="#">Créer un compte</a>
+	      <p>Vous n'avez pas de compte ? <a href="#">Créer un compte</a></p>
 	    </div>
     </div>
   </body>
