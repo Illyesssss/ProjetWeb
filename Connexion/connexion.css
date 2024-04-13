@@ -132,3 +132,7 @@ body {
     align-items: center;
     box-sizing: border-box;
 }
+
+.boutton_connexion:hover {
+    color: #2aade1;
+}
