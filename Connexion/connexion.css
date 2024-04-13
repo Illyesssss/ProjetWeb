@@ -45,7 +45,7 @@ body {
     height: 100%;
     border: none;
     outline: none;
-    border: 2px solide black;
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
     color: black;
@@ -134,5 +134,5 @@ body {
 }
 
 .boutton_connexion:hover {
-    color: #2aade1;
+    color: #006790;
 }
