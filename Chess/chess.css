@@ -124,3 +124,11 @@ header {
     filter: brightness(0.75);
   }
 }
+
+#echequier {
+  position: absolute;
+  top: 10.5vh;
+  left: 50vh;
+  height: 89.5vh;
+  width: 89.5vh;
+}
