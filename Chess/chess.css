@@ -125,10 +125,242 @@ header {
   }
 }
 
-#echequier {
+:root {  
+  --fond: url('https://i.ibb.co/G2NmSC0/b.jpg');
+  --casenoire: url('https://i.ibb.co/zmWrChF/c.jpg');
+  --caseblanche: url('https://i.ibb.co/wpF974H/White-wooden-textures-for-background.jpg');
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.jeu {
+  background-image: var(--fond);
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plateau {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  border-radius: 20px;
+  width: 40vw;
+  height: 40vw;
+}
+
+.lettrehaut {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 2vw;
+}
+
+.milieu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 36vw;
+}
+
+.lettrebas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 2vw;
+}
+
+.lettre {
+  display: flex;
+  font-family: "Comic Sans MS",sans-serif;
+  font-size: 1vw;
+  align-items: center;
+  justify-content: center;
+  width: 4.5vw;
+  height: 2vw;
+}
+
+.chiffregauche {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 2vw;
+  align-self: center;
+}
+
+.chiffredroit {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 2vw;
+  align-self: center;
+}
+
+.chiffre {
+  display: flex;
+  font-family: "Comic Sans MS",sans-serif;
+  font-size: 1vw;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: 4.5vw;
+}
+
+#cases {
+  display: flex;
+  flex-wrap: wrap;
+  width: 36vw;
+  height: 36vw;
+  align-self: center;
+}
+
+#caseB8,  #caseD8,  #caseF8,  #caseH8,  #caseA7,  #caseC7,  #caseE7,  #caseG7, #caseB6,  #caseD6,  #caseF6,  #caseH6,  #caseA5,  #caseC5,  #caseE5,  #caseG5, #caseB4,  #caseD4,  #caseF4,  #caseH4,  #caseA3,  #caseC3,  #caseE3,  #caseG3, #caseB2,  #caseD2,  #caseF2,  #caseH2,  #caseA1,  #caseC1,  #caseE1,  #caseG1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--casenoire);
+  width: 4.5vw;
+  height: 4.5vw;
+}
+
+#caseA8,  #caseC8,  #caseE8,  #caseG8,  #caseB7,  #caseD7,  #caseF7,  #caseH7, #caseA6,  #caseC6,  #caseE6,  #caseG6,  #caseB5,  #caseD5,  #caseF5,  #caseH5, #caseA4,  #caseC4,  #caseE4,  #caseG4,  #caseB3,  #caseD3,  #caseF3,  #caseH3, #caseA2,  #caseC2,  #caseE2,  #caseG2,  #caseB1,  #caseD1,  #caseF1,  #caseH1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--caseblanche);
+  width: 4.5vw;
+  height: 4.5vw;
+}
+
+.imagepion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5vw;
+  height: 4.5vw;
+}
+
+.menu {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 2.5vh;
+  color: white;
+  background-image: var(--menu);
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.w3-button {
+  border-radius: 20px 10px;
+  width: 20vw;
+  height: 6vh;
+}
+
+.menu1 {
+  border-radius: 20px 10px;
+  width: 20vw;
+  height: 6vh;
+}
+#menu2 {
+  border-radius: 20px 10px;
+  width: 20vw;
+  height: 6vh;
+}
+
+.menujeu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20vw;
+  height: 50%;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20vw;
+  height: 50%;
+}
+#divnom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 150px;
+  height: 20%;
+}
+
+.regles {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1vw;
+    height: 38vh;
+  width: 100%;
+    text-align: justify;
+    border: 1px solid black;
+    overflow: auto;
+  padding-right: 20px;
+}
+
+h2,h3,h4 {
+  color: green;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#fossejoueurA {
+  display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  width: 18vw;
+  height: 18vw;
+  margin-bottom: 22.5vw;
+}
+
+#fossejoueurB {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  width: 18vw;
+  height: 18vw;
+  margin-top: 22.5vw;
+}
+
+.pionfosseA {
+  width: 4.5vw;
+  height: 4.5vw;
+}
+
+.pionfosseB {
+  width: 4.5vw;
+  height: 4.5vw;
+}
+
+#cercle {
   position: absolute;
-  top: 10.5vh;
-  left: 50vh;
-  height: 89.5vh;
-  width: 89.5vh;
+    width: 2vw;
+    height: 2vw;
+  margin: auto;
+    border-radius: 1vw;
+    background: green;
 }
