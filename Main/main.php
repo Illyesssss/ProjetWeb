@@ -7,6 +7,48 @@
     <link rel="Icone" href="../images/logo.png">
   </head>
   <body>
+    <?php 
+      session_start();
+      if(isset($_POST['pseudo_connexion'], $_POST['mdp_connexion'])){
+        var_dump($pseudo_connex);
+        $pseudo_connex = $_POST['pseudo_connexion'];
+        $mdp_connex = $_POST['mdp_connexion'];
+
+        include '../BDD/connex.inc.php';
+        $pdo = connexion('../BDD/arman.sqlite');
+
+        try{
+          $stmt = $pdo->prepare('SELECT * FROM informations_user WHERE pseudo=:pseudo_connexion');
+          $stmt->bindParam(':pseudo_connexion', $pseudo_connex);
+          $stmt->execute(); 
+          $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+          $coonecte = 0;
+
+          if($user['pseudo'] == $pseudo_connex){
+            if(password_verify($mdp_connex, $user['mdp'])){
+              $_SESSION['pseudo'] = $pseudo_connex;
+              echo "<script>alert('Connexion réussie')</script>";
+              $connecte = 1;
+            }
+            else{
+              echo "<script>alert('Le mot de passe est incorrect')</script>";
+            }
+          }
+          if($connecte == 0){
+            echo "<script>alert('Le nom d\'utilisateur n\'existe pas')</script>";
+          }
+
+          $stmt->closeCursor();
+          $pdo = null;
+        }catch(PDOException $e){
+          echo $e->getMessage();
+          echo "<p> Erreur BDD </p>";
+        }
+      }
+    ?>
+
+
     <nav class="navbar">
       <a href="main.php"><img src="../images/logo.png" class="logo" alt="PlayNation" width="125"></img></a>
       <a href="main.php" class="liens_menu">Home</a>
@@ -23,6 +65,7 @@
       </div>
       <img src="../images/menu-btn.png" alt="Menu slide" class="menu-slide">
     </nav>
+    <p> &copy; </p>
   </body>
   <script src="main.js"></script>
 </html>
