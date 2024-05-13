@@ -2,9 +2,11 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayNation</title>
     <link rel="stylesheet" href="dames.css">
-    <link rel="Icone" href="../images/logo.png">
+    <link rel="Icone1" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <nav class="navbar">
@@ -22,9 +24,15 @@
       </div>
       <img src="../images/menu-btn.png" alt="Menu slide" class="menu-slide">
     </nav>
-    <div id="damier-box">
-      <img id="damier" src="../images/damier.jpg" alt="Damier du jeu de dames">
-    </div>
+    <div class="conteneur">
+      <div class="plateau" id="plateau"></div>
+      <div id="joueur-actuel" class="joueur-actuel">Joueur actuel : Blanc</div>
+      <div id="pions-blanc" class="pions-blanc">Pions blanc : 20</div>
+      <div id="pions-noir" class="pions-noir">Pions noir : 20</div>
+      <div class="menu-jeu">
+        <button id="nouvelle-partie">Nouvelle Partie</button>
+      </div> 
+  </div>
   </body>
   <script src="dames.js"></script>
 </html>
